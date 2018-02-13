@@ -36,10 +36,14 @@ Format: `help`
 ### Adding a person: `add`
 Adds a person to the address book<br>
 Format: `add NAME [p]p/PHONE_NUMBER [p]e/EMAIL [p]a/ADDRESS [t/TAG]...` 
- 
-> Words in `UPPER_CASE` are the parameters, items in `SQUARE_BRACKETS` are optional, 
+
+> Words in `UPPER_CASE` are the parameters, items in `SQUARE_BRACKETS` are optional,
 > items with `...` after them can have multiple instances. Order of parameters are fixed. 
-> 
+>
+> Name is case-insensitive. First letter of every word will be capitalised with the rest in lowercase.
+>
+> List of person will be sorted according to name each time a new person is added.
+>
 > Put a `p` before the phone / email / address prefixes to mark it as `private`. `private` details can only
 > be seen using the `viewall` command.
 > 
@@ -50,14 +54,14 @@ Examples:
 * `add Betsy Crowe pp/1234567 e/betsycrowe@gmail.com pa/Newgate Prison t/criminal t/friend`
 
 ### Listing all persons : `list`
-Shows a list of all persons in the address book.<br>
+Shows a sorted list of all persons in the address book.<br>
 Format: `list`
 
 ### Finding all persons containing any keyword in their name: `find`
 Finds persons whose names contain any of the given keywords.<br>
 Format: `find KEYWORD [MORE_KEYWORDS]`
 
-> The search is case sensitive, the order of the keywords does not matter, only the name is searched, 
+> The search is case-insensitive, the order of the keywords does not matter, only the name is searched,
 and persons matching at least one keyword will be returned (i.e. `OR` search).
 
 Examples: 

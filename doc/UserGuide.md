@@ -42,7 +42,7 @@ Format: `add NAME [p]p/PHONE_NUMBER [p]e/EMAIL [p]a/ADDRESS [t/TAG]...`
 >
 > Name is case-insensitive. First letter of every word will be capitalised with the rest in lowercase.
 >
-> List of person will be sorted according to name each time a new person is added.
+> List of person will be sorted in ascending order according to name each time a new person is added.
 >
 > Put a `p` before the phone / email / address prefixes to mark it as `private`. `private` details can only
 > be seen using the `viewall` command.
@@ -54,7 +54,7 @@ Examples:
 * `add Betsy Crowe pp/1234567 e/betsycrowe@gmail.com pa/Newgate Prison t/criminal t/friend`
 
 ### Listing all persons : `list`
-Shows a sorted list of all persons in the address book.<br>
+Shows a sorted list of all persons in the address book in ascending order.<br>
 Format: `list`
 
 ### Finding all persons containing any keyword in their name: `find`

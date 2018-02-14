@@ -26,7 +26,7 @@ public class AddCommand extends Command {
             + "Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...\n"
             + "Example: " + COMMAND_WORD
             + " John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney\n"
-            + "Name of person is case-insensitive. First letter of every word will be capitalised with the rest in lowercase.";
+            + "First letter of every word will be capitalised while the rest in lowercase automatically.";
 
     public static final String MESSAGE_SUCCESS = "New person added: %1$s";
     public static final String MESSAGE_DUPLICATE_PERSON = "This person already exists in the address book";

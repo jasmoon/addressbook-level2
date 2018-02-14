@@ -9,7 +9,7 @@ import java.util.List;
  * Represents a Person's name in the address book.
  * Guarantees: immutable; is valid as declared in {@link #isValidName(String)}
  */
-public class Name {
+public class Name implements Comparable<Name>   {
 
     public static final String EXAMPLE = "John Doe";
     public static final String MESSAGE_NAME_CONSTRAINTS = "Person names should be spaces or alphabetic characters";
@@ -26,7 +26,7 @@ public class Name {
         if (!isValidName(trimmedName)) {
             throw new IllegalValueException(MESSAGE_NAME_CONSTRAINTS);
         }
-        this.fullName = trimmedName;
+        this.fullName = capitaliseName(trimmedName);
     }
 
     /**
@@ -34,6 +34,23 @@ public class Name {
      */
     public static boolean isValidName(String test) {
         return test.matches(NAME_VALIDATION_REGEX);
+    }
+
+
+    /**
+     * @param name
+     * @return A String with first letter of every word capitalised
+     */
+    private static String capitaliseName(String name)  {
+        String[] parts = name.split(" ");
+        String returnName = "";
+        for(int i=0 ; i<parts.length; i++) {
+            parts[i] = parts[i].trim().toLowerCase();
+            if(!parts[i].isEmpty())   {
+                returnName = returnName + parts[i].substring(0,1).toUpperCase() + parts[i].substring(1) + " ";
+            }
+        }
+        return returnName;
     }
 
     /**
@@ -48,6 +65,10 @@ public class Name {
         return fullName;
     }
 
+    @Override
+    public int compareTo(Name b) {
+        return this.fullName.compareTo(b.fullName);
+    }
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object

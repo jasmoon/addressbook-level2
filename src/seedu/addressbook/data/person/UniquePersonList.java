@@ -1,11 +1,6 @@
 package seedu.addressbook.data.person;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 import seedu.addressbook.common.Utils;
 import seedu.addressbook.data.exception.DuplicateDataException;
@@ -102,12 +97,14 @@ public class UniquePersonList implements Iterable<Person> {
      * @throws DuplicatePersonException if the person to add is a duplicate of an existing person in the list.
      *    The @link{ReadOnlyPerson#isSamePerson} method is used for this comparison,
      *    which defines a weaker notion of equality.
+     *    Sorts list according to the Person's name each time a new person is added
      */
     public void add(Person toAdd) throws DuplicatePersonException {
         if (contains(toAdd)) {
             throw new DuplicatePersonException();
         }
         internalList.add(toAdd);
+        internalList.sort(Comparator.comparing(Person::getName));
     }
 
     /**

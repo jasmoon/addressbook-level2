@@ -246,9 +246,11 @@ public class Parser {
 
         // keywords delimited by whitespace
         final String[] keywords = matcher.group("keywords").split("\\s+");
+        //capitalise first letter every string in array keywords
+        for(int i=0 ; i<keywords.length ; i++)  {
+            keywords[i] = keywords[i].substring(0,1).toUpperCase() + keywords[i].substring(1).toLowerCase();
+        }
         final Set<String> keywordSet = new HashSet<>(Arrays.asList(keywords));
         return new FindCommand(keywordSet);
     }
-
-
 }

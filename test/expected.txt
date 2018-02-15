@@ -6,10 +6,11 @@
 || Using storage file : addressbook.xml
 || ===================================================
 || Enter command: || [Command entered:  sfdfd]
-|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
+|| add: Adds a person to the address book. List is sorted after successfully adding a person.
+|| Contact details can be marked private by prepending 'p' to the prefix.
 || Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
 || Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
-|| First letter of every word will be capitalised while the rest in lowercase automatically.
+|| First letter of every word for NAME will be capitalised while the rest in lowercase automatically.
 || delete: Deletes the person identified by the index number used in the last person listing.
 || Parameters: INDEX
 || Example: delete 1
@@ -49,31 +50,35 @@
 || ===================================================
 || Enter command: || [Command entered:  add wrong args wrong args]
 || Invalid command format! 
-|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
+|| add: Adds a person to the address book. List is sorted after successfully adding a person.
+|| Contact details can be marked private by prepending 'p' to the prefix.
 || Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
 || Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
-|| First letter of every word will be capitalised while the rest in lowercase automatically.
+|| First letter of every word for NAME will be capitalised while the rest in lowercase automatically.
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name 12345 e/valid@email.butNoPhonePrefix a/valid, address]
 || Invalid command format! 
-|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
+|| add: Adds a person to the address book. List is sorted after successfully adding a person.
+|| Contact details can be marked private by prepending 'p' to the prefix.
 || Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
 || Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
-|| First letter of every word will be capitalised while the rest in lowercase automatically.
+|| First letter of every word for NAME will be capitalised while the rest in lowercase automatically.
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name p/12345 valid@email.butNoPrefix a/valid, address]
 || Invalid command format! 
-|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
+|| add: Adds a person to the address book. List is sorted after successfully adding a person.
+|| Contact details can be marked private by prepending 'p' to the prefix.
 || Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
 || Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
-|| First letter of every word will be capitalised while the rest in lowercase automatically.
+|| First letter of every word for NAME will be capitalised while the rest in lowercase automatically.
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name p/12345 e/valid@email.butNoAddressPrefix valid, address]
 || Invalid command format! 
-|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
+|| add: Adds a person to the address book. List is sorted after successfully adding a person.
+|| Contact details can be marked private by prepending 'p' to the prefix.
 || Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
 || Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
-|| First letter of every word will be capitalised while the rest in lowercase automatically.
+|| First letter of every word for NAME will be capitalised while the rest in lowercase automatically.
 || ===================================================
 || Enter command: || [Command entered:  add Valid Name p/12345 e/valid@email.butNoTagPrefix a/valid, address t/goodTag noPrefixTag]
 || Tags names should be alphanumeric
@@ -278,7 +283,7 @@
 || 4 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 4]
-|| Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
+|| Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.p   otato Address: (private) 555, epsilon street Tags: [tubers][starchy]
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 

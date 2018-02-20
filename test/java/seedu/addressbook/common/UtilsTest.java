@@ -22,7 +22,7 @@ public class UtilsTest {
         assertNotContainNull(1, 2);
         assertNotContainNull(1);
     }
-    
+
     @Test
     public void elementsAreUnique() throws Exception {
         // empty list
@@ -49,11 +49,11 @@ public class UtilsTest {
     }
 
     private void assertContainNull(Object... objects)   {
-        assertTrue(Utils.elementsAreUnique((Arrays.asList(objects))));
+        assertTrue(Utils.isAnyNull((Arrays.asList(objects))));
     }
 
     private void assertNotContainNull(Object... objects)   {
-        assertFalse(Utils.elementsAreUnique((Arrays.asList(objects))));
+        assertFalse(Utils.isAnyNull((Arrays.asList(objects))));
     }
 
     private void assertAreUnique(Object... objects) {

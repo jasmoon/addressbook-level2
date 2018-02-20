@@ -22,6 +22,7 @@ public class UtilsTest {
         assertNotContainNull(1, 2);
         assertNotContainNull(1);
     }
+    
     @Test
     public void elementsAreUnique() throws Exception {
         // empty list

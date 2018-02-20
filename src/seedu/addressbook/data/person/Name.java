@@ -50,7 +50,7 @@ public class Name implements Comparable<Name>   {
                 returnName = returnName + parts[i].substring(0,1).toUpperCase() + parts[i].substring(1) + " ";
             }
         }
-        return returnName;
+        return returnName.trim();
     }
 
     /**

@@ -224,7 +224,7 @@
 || ===================================================
 || Enter command: || [Command entered:  find betsy]
 || 	1. Betsy Choo Tags: [secretive]
-||
+|| 
 || 1 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  find Betsy]
@@ -283,7 +283,7 @@
 || 4 persons listed!
 || ===================================================
 || Enter command: || [Command entered:  delete 4]
-|| Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.p   otato Address: (private) 555, epsilon street Tags: [tubers][starchy]
+|| Deleted Person: Esther Potato Phone: 555555 Email: esther@not.a.real.potato Address: (private) 555, epsilon street Tags: [tubers][starchy]
 || ===================================================
 || Enter command: || [Command entered:  list]
 || 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags: 

@@ -12,10 +12,18 @@ public class UtilsTest {
 
     @Test
     public void isAnyNull() throws Exception {
-        // contains null
+
+        //empty list
+        assertNotContainNull();
+
+        // contains 1 or more null
         assertContainNull(null, 1, new Integer(1));
         assertContainNull(null, null);
         assertContainNull((Object) null);
+
+        // only contains null
+        assertContainNull(null, null);
+        assertContainNull(null, null, null);
 
         // does not contain null
         assertNotContainNull("abc", "ab", "a");
@@ -49,11 +57,11 @@ public class UtilsTest {
     }
 
     private void assertContainNull(Object... objects)   {
-        assertTrue(Utils.isAnyNull((Arrays.asList(objects))));
+        assertTrue(Utils.isAnyNull(objects));
     }
 
     private void assertNotContainNull(Object... objects)   {
-        assertFalse(Utils.isAnyNull((Arrays.asList(objects))));
+        assertFalse(Utils.isAnyNull(objects));
     }
 
     private void assertAreUnique(Object... objects) {
